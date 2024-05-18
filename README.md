@@ -7,10 +7,10 @@ Welcome to the Technical Interview Preparation Program repository! 🎉 This com
 1. [Introduction](#introduction)
 2. [Chapters](#chapters)
 
-- [Chapter 1: Technical Interview Preparation Roadmap](#chapter-1-technical-interview-preparation-roadmap)
-- [Chapter 2: Sequences](#chapter-2-sequences)
-- [Chapter 3: Divide and Conquer Algorithms](#chapter-3-divide-and-conquer-algorithms)
-- [Chapter 4: Computational Complexity](#chapter-4-computational-complexity)
+   - [Chapter 1: Technical Interview Preparation Roadmap](#chapter-1-technical-interview-preparation-roadmap)
+   - [Chapter 2: Sequences](#chapter-2-sequences)
+   - [Chapter 3: Divide and Conquer Algorithms](#chapter-3-divide-and-conquer-algorithms)
+   - [Chapter 4: Computational Complexity](#chapter-4-computational-complexity)
 
 3. [Getting Started](#getting-started)
 4. [Contributing](#contributing)
