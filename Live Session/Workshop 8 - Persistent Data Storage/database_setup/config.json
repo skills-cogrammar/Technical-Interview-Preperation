@@ -1,0 +1,10 @@
+{
+    "service": "postgres",
+    "connection_string": {
+        "username": "postgres",
+        "password": "superstrongpassword",        
+        "database": "f_one",
+        "port": 5432,
+        "server": "localhost"
+    }
+}
