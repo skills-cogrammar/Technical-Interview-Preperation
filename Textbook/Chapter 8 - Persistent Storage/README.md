@@ -340,11 +340,23 @@ REVOKE INSERT ON account FROM dev;
 
 | Command  | Description                                  | Syntax    |
 | -------- | -------------------------------------------- | --------- |
+| BEGIN   | Saves all changes made during a transaction  | BEGIN;   |
 | COMMIT   | Saves all changes made during a transaction  | COMMIT;   |
 | ROLLBACK | Undoes all changes made during a transaction | ROLLBACK; |
 
 ```sql
+BEGIN;
+UPDATE account
+SET username = 'harry';
+-- COMMIT;
+-- ROLLBACK;
 ```
+- Transactions start when we run the `BEGIN;`
+- We can use transactions in a few ways
+	- Testing the result of a certain change, if the result looks good, we can run the `COMMIT;` line and our changes will be persisted, if it's bad, we can run the `ROLLBACK;` line and our database will go back to how it was before the command was executed
+ 	- Ensuring that all required operations run
+  		- We can run a large set of operations as a transaction, if one of the steps fails after some changes were made, we can have logic to ROLLBACK the changes, if not, we can commit the changes
+
 
 
 ### 8.7 Querying Data In SQL
