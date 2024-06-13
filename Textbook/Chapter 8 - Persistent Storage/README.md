@@ -762,26 +762,26 @@ ON n.id = a.id
 This chapter just touches the surfaces of SQL, it's important that you not only read more into SQL, but also get some hands on experience with it. Below are a few links to some resources that you can take a look at to learn more about SQL amd also get your hands dirty.
 
 ### Additional Reading 
-- [DCL Commands](#https://www.javatpoint.com/dcl-commands-in-sql)
-- [W3 Schools](#https://www.w3schools.com/sql/)
-- [SQLBolt - Learn how to make SQL queries](#https://sqlbolt.com/)
-- [SQLzoo - SQL Tutorial](#https://sqlzoo.net/wiki/SQL_Tutorial)
+- [DCL Commands](https://www.javatpoint.com/dcl-commands-in-sql)
+- [W3 Schools](https://www.w3schools.com/sql/)
+- [SQLBolt - Learn how to make SQL queries](https://sqlbolt.com/)
+- [SQLzoo - SQL Tutorial](https://sqlzoo.net/wiki/SQL_Tutorial)
 
 ### Free Courses
-- [SQL and Relational Databases](#https://cognitiveclass.ai/courses/learn-sql-relational-databases)
-- [IBM Introduction to SQL](#https://www.edx.org/learn/sql/ibm-introduction-to-sql?index=product&objectID=course-58977d3a-894b-45bb-9d5a-2dbbb5031163&webview=false&campaign=Introduction+to+SQL&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Flearn%2Fsql)
-- [IBM: SQL for Data Science](#https://www.edx.org/learn/data-science/ibm-sql-for-data-science?index=product&objectID=course-2b907cc6-4020-4242-a369-38a48ae95f83&webview=false&campaign=SQL+for+Data+Science&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Flearn%2Fsql)
+- [SQL and Relational Databases](https://cognitiveclass.ai/courses/learn-sql-relational-databases)
+- [IBM Introduction to SQL](https://www.edx.org/learn/sql/ibm-introduction-to-sql?index=product&objectID=course-58977d3a-894b-45bb-9d5a-2dbbb5031163&webview=false&campaign=Introduction+to+SQL&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Flearn%2Fsql)
+- [IBM: SQL for Data Science](https://www.edx.org/learn/data-science/ibm-sql-for-data-science?index=product&objectID=course-2b907cc6-4020-4242-a369-38a48ae95f83&webview=false&campaign=SQL+for+Data+Science&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Flearn%2Fsql)
 
 ### Practice
-- [8 Weeks of SQL Challenges](#https://8weeksqlchallenge.com/)
-- [Strata Scratch](#https://platform.stratascratch.com/coding?code_type=1)
-- [Leetcode SQL 50](#https://leetcode.com/studyplan/top-sql-50/)
+- [8 Weeks of SQL Challenges](https://8weeksqlchallenge.com/)
+- [Strata Scratch](https://platform.stratascratch.com/coding?code_type=1)
+- [Leetcode SQL 50](https://leetcode.com/studyplan/top-sql-50/)
 
 ### Video Tutorials
-- [Learn Database Normalization - 1NF, 2NF, 3NF, 4NF, 5NF](#https://www.youtube.com/watch?v=GFQaEYEc8_8)
-- [SQL for Data Analytics - Learn SQL in 4 Hours](#https://www.youtube.com/watch?v=7mz73uXD9DA)
-- [Learn SQL for Data Analysis in one hour (with sample dataset + 50 queries)](#https://www.youtube.com/watch?v=l8DCPaHc5TQ)
-- [Data Cleaning in MySQL | Full Project](#https://www.youtube.com/watch?v=4UltKCnnnTA)
+- [Learn Database Normalization - 1NF, 2NF, 3NF, 4NF, 5NF](https://www.youtube.com/watch?v=GFQaEYEc8_8)
+- [SQL for Data Analytics - Learn SQL in 4 Hours](https://www.youtube.com/watch?v=7mz73uXD9DA)
+- [Learn SQL for Data Analysis in one hour (with sample dataset + 50 queries)](https://www.youtube.com/watch?v=l8DCPaHc5TQ)
+- [Data Cleaning in MySQL | Full Project](https://www.youtube.com/watch?v=4UltKCnnnTA)
 
 
 
