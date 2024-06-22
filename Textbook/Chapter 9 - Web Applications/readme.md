@@ -18,14 +18,14 @@ HyperText Markup Language (HTML) is behind everything that we can view on the we
 ```html 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Document</title>
-	</head>
-	
-	<body>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
 </html>
 ```
 - Like other markup languages, HTML stores items based on relationships
@@ -61,7 +61,7 @@ Tags are really important in HTML as they define the scope of our element, if yo
 
 ```
 <div>
-	<input/>
+    <input/>
 </div>
 ```
 
@@ -87,9 +87,9 @@ When you start working with HTML elements, it's worth doing some research online
 
 ```html
 <div class="container" id="root">
-	<a href="https://www.google.com">
-		Click Here
-	</a>
+    <a href="https://www.google.com">
+	Click Here
+    </a>
 </div>
 ```
 - The attributes are added to the opening tag of the element 
@@ -103,14 +103,14 @@ The concept of component based design is better described when working with libr
 
 ```html 
 <html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Document</title>
-	</head>
-	
-	<body>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
 </html>
 ```
 - The first hierarchy that we can observe is the one between the `html` element:
@@ -120,23 +120,23 @@ The concept of component based design is better described when working with libr
 *Zooming into the body section*
 ```html 
 <body>
-	<div style="margin-left: 50px">
-		<div>
-			DIV GROUP 1
-		</div>		
-		<div>
-			DIV GROUP 1
-		</div>
+    <div style="margin-left: 50px">
+	<div>
+	    DIV GROUP 1
+	</div>		
+	<div>
+            DIV GROUP 1
 	</div>
+    </div>
 
-	<div style="background-color: brown">
-		<div>
-			DIV GROUP 2
-		</div>		
-		<div>
-			DIV GROUP 2
-		</div>
-	</div>	
+    <div style="background-color: brown">
+	<div>
+            DIV GROUP 2
+	</div>		
+	<div>
+            DIV GROUP 2
+	</div>
+    </div>	
 </body>
 ```
 
@@ -220,12 +220,12 @@ We can assign an element to as many classes as we need, but it's important to ma
 
 ```html 
 <div class="container">        
-	<div class="left child">
-		LEFT
-	</div>
-	<div class="right child">
-		RIGHT
-	</div>
+    <div class="left child">
+	LEFT
+    </div>
+    <div class="right child">
+	RIGHT
+    </div>
 </div>
 ```
 - The first div is of the `container` class 
@@ -244,12 +244,12 @@ Id's are most important when working with JavaScript as they allow us to make ch
 
 ```html 
 <div id="container">        
-	<div id="left-child">
-		LEFT
-	</div>
-	<div id="right-child">
-		RIGHT
-	</div>
+    <div id="left-child">
+	LEFT
+    </div>
+    <div id="right-child">
+	RIGHT
+    </div>
 </div>
 ```
 
@@ -684,31 +684,31 @@ Cascading Style Sheet (CSS) is styling language that is applied to markup langua
 
 ```css
 h2 {
-	margin: 0;
-	font-size: 5em;            
+margin: 0;
+font-size: 5em;            
 }
 
 .container {
-	width: 100vw;
-	background-color: brown;            
-	display: flex;
-	justify-content: space-evenly;
+width: 100vw;
+background-color: brown;            
+display: flex;
+justify-content: space-evenly;
 }
 
 .child {
-	width: 100%;
+width: 100%;
 }
 
 #left-child{
-	background-color: aqua;
+background-color: aqua;
 }
 
 .container .right{
-	background-color: blue;
+background-color: blue;
 }
 
 .container h2 {
-	font-size: 1em;
+font-size: 1em;
 }
 ```
 - To identify class elements a full stop is added before the name `.class-name`
@@ -731,11 +731,11 @@ Flexbox is a good approach for layout your page, as the name implies, it offers 
 
 ```css
 #container {
-	display: flex;
+display: flex;
 }
 
 #container div{
-	flex: 1;
+flex: 1;
 }
 ```
 
@@ -755,9 +755,9 @@ Flexbox is a good approach for layout your page, as the name implies, it offers 
 
 ```css
 .grid-container {  
-	display: grid;
-	grid-template-columns: auto auto auto; 
-	gap: 20px
+display: grid;
+grid-template-columns: auto auto auto; 
+gap: 20px
 }
 ```
 <div id="container" style="display: grid; grid-template-columns: auto auto auto; gap: 20px">
@@ -803,12 +803,10 @@ If a certain element has multiple styles applied, the styles for a specific attr
 2. Class
 3. Tag
 
-Using the order in which styles are applied, we can have a global styling for all component of a certain type, for example, we can set a font for all `h2` tag and then style the colour and size on a class level or id level, if we decide to use a different font for a specific class or id, it will be applied over the global font.
+Using the order in which styles are applied, we can have a global styling for all components of a certain type, for example, we can set a font for all `h2` tag and then style the colour and size on a class level or id level, if we decide to use a different font for a specific class or id, it will be applied over the global font.
 
 ## 3.2 Invisible Styling 
 Before we get into the fancy stuff, we need to talk about the "invisible" styling as I have affectionately dubbed it. These dictate the spaces around and within an element and are important to how the element will be displayed within it's parent element.
-
-![[Pasted image 20240618165316.png]]
 
 ### 3.2.1 Margin 
 When we have a container of any type, we refer to the margin as the space around the container, this is a force that the container will apply on it's parent and result in the position of the component changing within the parent component.
