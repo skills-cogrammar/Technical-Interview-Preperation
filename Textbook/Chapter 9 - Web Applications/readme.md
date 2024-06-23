@@ -474,6 +474,7 @@ Using the knowledge from the last section, we are going to create a simple webpa
 	- the `method="post"` indicates that we want to make a post request to the API
 
 **OUTPUT**
+
 <body>
     <header>
         <h2>Contact Us</h2>
