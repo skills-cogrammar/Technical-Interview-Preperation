@@ -475,18 +475,16 @@ Using the knowledge from the last section, we are going to create a simple webpa
 
 **OUTPUT**
 
-<body>
-    <header>
-        <h2>Contact Us</h2>
-    </header>
-    <form action="" method="post">
-        <input id="name" name="name" placeholder="Your Name" type="text" maxlength="30">
-        <input id="surname" name="surname" placeholder="Your Last Name" type="text" maxlength="30">
-        <input type="number" name="age" placeholder="age" min="0">
-        <textarea name="message" id="message" placeholder="Your message"></textarea>
-        <button type="submit"> Send </button>
-    </form>
-</body>
+<header>
+<h2>Contact Us</h2>
+</header>
+<form action="" method="post">
+<input id="name" name="name" placeholder="Your Name" type="text" maxlength="30">
+<input id="surname" name="surname" placeholder="Your Last Name" type="text" maxlength="30">
+<input type="number" name="age" placeholder="age" min="0">
+<textarea name="message" id="message" placeholder="Your message"></textarea>
+<button type="submit"> Send </button>
+</form>
 
 
 ## 2.2.1 Simple Contact Us Page More Structure 
