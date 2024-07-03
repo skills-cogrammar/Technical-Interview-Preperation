@@ -259,65 +259,30 @@ Using the knowledge from the last section, we are going to create a simple webpa
   <body>
        
     <section>
-             
-      <h1>            Resume        </h1>
-
-             
-      <h3>            John Doe        </h3>
-         
+      <h1>Resume</h1>
+      <h3>John Doe</h3>
     </section>
-
-       
     <hr />
-
-       
     <section>
-             
       <h4>Experience</h4>
-             
       <ul>
-                   
-        <li>                Software Architect - Facebook            </li>
-
-                   
-        <li>                Technical Lead - Amazon            </li>
-
-                   
-        <li>                Senior Software Engineer - Apple            </li>
-
-                   
-        <li>
-                          Mid-Level Software Engineer - Netflix            
-        </li>
-
-                   
-        <li>                Junior Software Engineer - Google            </li>
-               
+        <li>Software Architect - Facebook</li>
+        <li>Technical Lead - Amazon</li>
+        <li>Senior Software Engineer - Apple</li>
+        <li>Mid-Level Software Engineer - Netflix</li>
+        <li>Junior Software Engineer - Google</li>               
       </ul>
-         
     </section>
-
-       
     <section>
-             
       <h4>Skills</h4>
-             
       <ul>
-                   
-        <li>                Golang            </li>
-                   
-        <li>                Kafka            </li>
-                   
-        <li>                Kubernetes            </li>
-                   
-        <li>                Docker            </li>
-                   
-        <li>                Flink            </li>
-                   
-        <li>                Snowflake            </li>
-               
+        <li>Golang</li>
+        <li>Kafka</li>
+        <li>Kubernetes</li>
+        <li>Docker</li>
+        <li>Flink</li>
+        <li>Snowflake</li>
       </ul>
-         
     </section>
   </body>
 </html>
@@ -335,68 +300,33 @@ Using the knowledge from the last section, we are going to create a simple webpa
   **OUTPUT**
 
 <body>
-    <section>
-        <h1>
-            Resume
-        </h1>
-
-<h3>
-            John Doe
-        </h3>
-    </section>
-
-<hr>
-
-<section>
-        <h4>Experience</h4>
-        <ul>
-            <li>
-                Software Architect - Facebook
-            </li>
-
-<li>
-                Technical Lead - Amazon
-            </li>
-
-<li>
-                Senior Software Engineer - Apple
-            </li>
-
-<li>
-                Mid-Level Software Engineer - Netflix
-            </li>
-
-<li>
-                Junior Software Engineer - Google
-            </li>
-        </ul>
-    </section>
-
-<section>
-        <h4>Skills</h4>
-        <ul>
-            <li>
-                Golang
-            </li>
-            <li>
-                Kafka
-            </li>
-            <li>
-                Kubernetes
-            </li>
-            <li>
-                Docker
-            </li>
-            <li>
-                Flink
-            </li>
-            <li>
-                Snowflake
-            </li>
-        </ul>
-    </section>
-
-</body>
+    <section>
+      <h1>Resume</h1>
+      <h3>John Doe</h3>
+    </section>
+    <hr />
+    <section>
+      <h4>Experience</h4>
+      <ul>
+        <li>Software Architect - Facebook</li>
+        <li>Technical Lead - Amazon</li>
+        <li>Senior Software Engineer - Apple</li>
+        <li>Mid-Level Software Engineer - Netflix</li>
+        <li>Junior Software Engineer - Google</li>               
+      </ul>
+    </section>
+    <section>
+      <h4>Skills</h4>
+      <ul>
+        <li>Golang</li>
+        <li>Kafka</li>
+        <li>Kubernetes</li>
+        <li>Docker</li>
+        <li>Flink</li>
+        <li>Snowflake</li>
+      </ul>
+    </section>
+  </body>
 
 ## 2.2 Simple Contact Us Page
 
@@ -404,16 +334,10 @@ _Zoom into the body element_
 
 ```html
 <body>
-     
   <header>
-           
     <h2>Contact Us</h2>
-       
   </header>
-
-     
   <form action="" method="post">
-           
     <input
       id="name"
       name="name"
@@ -421,7 +345,6 @@ _Zoom into the body element_
       type="text"
       maxlength="30"
     />
-
     <input
       id="surname"
       name="surname"
@@ -429,15 +352,11 @@ _Zoom into the body element_
       type="text"
       maxlength="30"
     />
-                    <input type="number" name="age" placeholder="age" min="0" />
 
-           
+    <input type="number" name="age" placeholder="age" min="0" />
     <textarea name="message" id="message" placeholder="Your message">
-	        </textarea
-    >
-
-    <button type="submit">Send</button>
-       
+    </textarea>
+    <button type="submit">Send</button>       
   </form>
 </body>
 ```
