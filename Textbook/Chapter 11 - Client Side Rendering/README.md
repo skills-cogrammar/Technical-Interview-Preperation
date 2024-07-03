@@ -1,0 +1,447 @@
+# The Handbook
+
+# Chapter 11: Client Side Rendering
+
+In the current day, having static websites is not enough for most businesses and services, there needs to be some sort of user interaction to make a service or a website more appealing. 
+
+Client Side Rendering takes place when the content that the user sees on their end is generated their browser based on the code that is sent from the websites server, this technique usually reduces the strain on the server as web pages do not need to be rendered on a single server.
+
+Adding dynamic functionality to websites that are rendered on the client side can only be done through JavaScript code, JavaScript is the language of the web and is the only language that is supported by most (if not all) browsers.
+
+In this chapter, we will take a look at JavaScript and it’s different features that allow us to add dynamic features to our websites.
+
+# 11.1: Learning A New Programming Language
+
+Before we look at how we can incorporate JavaScript to a web application, we need to understand how the programming language works.
+
+If you are reading this, there is a chance that you’ve never worked with any other programming language other than Python.
+
+Learning a new language can be quite daunting, but the truth is that the biggest challenge of learning a new language is convincing yourself to start. 
+
+It’s true that each programming language has very different ways of performing certain operations and becoming an expert at the language takes a lot of time and effort, but getting a surface level understanding of a language is something that can take a day or two if you are coming from another programming language, from this surface level knowledge, you can learn more by building projects that you built in your old language and seeing how concepts that you are familiar with are applied in this language.
+
+This section will introduce you to the basic concepts of JavaScript, and from there, you should be able to build some of the basic applications that you built in the first few tasks of your bootcamp. It’s advised to try rebuilding some of the earlier tasks with JavaScript and doing some independent research on how you can implement certain Python things in JavaScript.
+
+### 11.1.1 Working with Variables
+
+Understanding the different data types and being able to declare variables properly is the first step to learning any programming language.
+
+Python is unique in the fact that you don’t need any special keywords that state a new variable is being created, this will most probably be the hardest habit to shake off when learning a new language, especially a language like JavaScript that does not have any built-in measure for warning you about syntax violations as you write your code.  
+
+### **Creating Variables**
+
+To create a variable in JavaScript, you need to explicitly state that a variable is being created, unlike Python, the variable will not be implicitly created by calling a name and stating a value.
+
+We can make use of the following keywords to create variables.
+
+- `const` - This will create a variable that can not be mutated
+- `let` - This will create a mutable variable
+- `var` - This will create a mutable variable that has a global scope
+
+We will commonly use the `const` and the `let` keywords for creating variables, the `var` keyword is highly discouraged and considered legacy due to the overhead that comes with having to manage a variable created using this keyword. 
+
+One important thing to also keep in mind when working with JavaScript is that it’s a dynamically typed language, so similar to Python, the data type that is being stored in a variable can change as the application goes on.
+
+### Strings
+
+Like Python, JavaScript has the string data type, strings work the same in both languages so there is no need to go in-depth about what a string is. 
+
+like everything else in this chapter, it’s always worth looking at the documentation to get a better understanding of how you can incorporate different things, this chapter would be really long if we went into detail about every single feature of JavaScript.
+
+Please take a look at the string documentation to see the different methods that can be applied to the string data type in JavaScript. [[LINK](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)]
+
+To create a string, we can make use of the literal syntax or call the `String()` function to create a string.
+
+- `""` - String literal that allows us to include `'`  within our string
+- `''` - String literal
+- ```` - Template literal, this allows us to pass variable in our strings using the `${}`
+- `String()` - String object, allows us to create a string object or cast a variable of another data type to a string.
+
+```jsx
+const myString = "here's a string literal";
+const myStringTwo = 'here is a string literal';
+const myTemplateLiteral = `String 1 states: ${myString}\n String 2 state: ${myStringTwo}`;
+
+const number = 1;
+const numberAsAString = String(number);
+
+```
+
+- Note that we are using the `const` keyword since the values won’t be changed at any point in the life of the code.
+- the variable names make use of camelCase
+- We are able to implement the different ways of creating literals
+- To pass a variable to a template literal, we are using the `${}`
+
+### Numbers
+
+Unlike most languages where there are different data types of storing whole number and numbers with floating points, JavaScript bundle everything together in the `Number` data type, this makes it a lot easier to work with numeric values.
+
+```jsx
+const numberOne = 1;
+const numberTwo = 0.2;
+const sum = numberOne + numberTwo;
+```
+
+### Boolean
+
+The boolean data type is the same in all languages, we use it to store true or false. The main thing to keep in mind when coming from Python is that the words true and false have to be written in lowercase for them to register in JavaScript otherwise you will be called objects that don’t exist.
+
+```jsx
+let isActive = true;
+let isDone = false; 
+```
+
+- The variables are declared using the `let` keyword because the nature of these variable would indicate that somewhere in the future, they will need to change.
+
+### Undefined
+
+The undefined type is used to represent that there is no data currently being stored in a given variable, or the object that is being referenced does not exist. In statically typed languages, you would have an empty state for your variables, for example, the empty state of an integer would be 0, for a string it would be “” and so on, but since we are not able to specify data types for our variables, the undefined data type states that there are no values to be accessed for the specified variable.
+
+```jsx
+const myVariable;
+console.log(myVariable); // this would return undefined 
+```
+
+- We are using the `console.log()` which prints a message in the browser console.
+
+### Null
+
+Similar to the undefined, the null data type states that there is no data, the difference is that the undefined is meant to state that there is not yet any data, where the null data type is there to state that there was data before, but it has been cleared and the variable is pointing to nothing.
+
+```jsx
+let myVariable = "something";
+myVariabel = null;
+```
+
+### Objects
+
+Objects are a key component of JavaScript, they offer a convenient way of sending data between the different parts of your application.
+
+ As the name implies, they have some relation to classes, as you might remember from OOP, an object is an instance of a class.
+
+Older versions of JavaScript did not have a direct way of creating classes, so objects were able to take the place of classes, but classes are now a thing and objects are not mainly used for passing data around the application, similar to dictionaries in Python, except they are a lot more dynamic.
+
+```jsx
+const myObject = {
+	name: "Jack",
+	age: 74
+}  
+```
+
+- The syntax for creating an object is similar to Pythons dictionaries, the only difference is that the key does not have to be in quotations if it’s a string.
+- We can use the `const` keyword to create the object, but we are still able to modify the object.
+
+```jsx
+const myObject = {
+	name: "Jack",
+	age: 74,
+
+	getDetails(){
+		return `${this.name} is ${this.age} years old`;		
+	}
+}  
+```
+
+- We are able to create functions within out objects, these functions are able to access the different attribute within the object.
+- This is not a common thing to do since the classes have been created in JavaScript.
+
+```jsx
+const myObject = {
+	name: "Jack",
+	age: 74
+}  
+
+console.log(myObject.name);
+console.log(myObject["age"]);
+
+```
+
+- The keys for the objects can be referenced using the `object.key`  or `object["key"]` approaches. This allows for more dynamic operations to be performed.
+
+## 11.1.2 Conditional  Statements
+
+Conditions are a key part of any programming language, they are key to making decisions in our code.
+
+Conditional statements in JavaScript are very similar to conditional statements in Python, but there are a few difference to keep in mind.
+
+Simple condition 
+
+```jsx
+ if (i == 10){
+	console.log("The value of 'i' is equal to 10")
+ }
+```
+
+- The parenthesis around the condition is required in JavaScript unlike in Python where it’s optional
+- We can use the same comparison operators in JavaScript and Python
+    - But in JavaScript `==` is general equality, so 2 would be the same as “2”, for equality that takes the data type into account, we use the deep equal `===` , this will check the data type of the two variables as well.
+- When working with statements, we need to use the curly braces to show the code that is contained within a statement `{}`
+
+```jsx
+if (i == 10){
+	console.log("The value of 'i' is equal to 10")
+} else if (i == 15){
+	console.log("The value of 'i' is equal to 15")
+}
+```
+
+- To have a chained conditional statement, we can use the `else if` , this is different to the `elif` that is used in Python.
+
+```jsx
+if (i > 10 && i < 20){
+	console.log("'i' is within the reuqired range")
+}
+```
+
+- Logical operators are different in JavaScript
+    - `&&` - AND
+    - `||` - OR
+    - `!` - NOT
+
+```jsx
+switch(i){
+	case 10: 
+		console.log("the value of 'i' is equal to 10");
+		break;
+	case 15: 
+		console.log("the value of 'i' is equal to 15");
+		break;
+	case 20: 
+		console.log("the value of 'i' is equal to 20");
+		break;
+	case 25: 
+		console.log("the value of 'i' is equal to 25");
+		break;
+}
+```
+
+- We can use the switch statement to check whether a single value matches one of a few conditions.
+- We use the `case` keyword to specify the value we are comparing
+- the `:` comes before the operation that should be performed
+- we need to use the `break` to exit the statement if the condition is met otherwise all of the other conditions will be checked.
+
+## 11.1.3 Looping
+
+Along with variables and conditions, loops are part of the foundational knowledge required to write basic code in a language, basically, this is the last piece of the puzzle that you need to unlock to be able to write a lot of code with JavaScript.
+
+**While Loop** 
+
+While loops in JavaScript are very similar to while loops in Python, the differences between a Python while loop and a JavaScript while loop are the same as the differences between the if statement in both languages.
+
+```jsx
+while (i > 10 && i !== 14){
+	console.log(i);
+	i++
+}
+```
+
+- We can use the `++` to increment a numeric variable, this would be the same as `i += 1`  in Python.
+
+**For loops** 
+
+There are a few ways to create for loops in JavaScript, we can make use of a for loop that loops through a given range, we can create a foreach loop, and we can make use of built in array methods for looping through each item in the array.
+
+```jsx
+for (let i = 0; i < 10; i++){
+	console.log(i)
+}
+```
+
+- This is similar to the `range()` method when creating a loop in Python
+- `let i = 0` - The loop starts at 0
+- `i < 10` - The loop will end when i is no longer less than 10
+- `i++` - we are increasing the size of i by 1 after each iteration
+- Since we are starting at 0 and running the loop until 9 (since 9 is the last value that's lower than 10), our loop will run for 10 iteration.
+
+```jsx
+const number = [1,2,3,4,5]
+for (i in numbers){
+	console.log(i)
+}
+```
+
+- the `for ... in ...` loop will look through the indexes of an array/list or the keys of an object. This approach is good if you want to get all of the keys in a given object.
+
+```jsx
+const number = [1,2,3,4,5]
+for (num of numbers){
+	console.log(num)
+}
+```
+
+- The `for ... of ...` loop will loop through the values in a list/array or object
+
+## 11.1.4 Functions
+
+Now that you have some of the basic tools required to write JavaScript code, it’s time to look at how the code can be made a bit cleaner.
+
+Functions are a key part of any language especially when you want to write modular code. Functions in JavaScript have extra important as they play a key role in how you interact with the DOM. 
+
+A lot of JavaScript operations will make use of callback functions, these are basically just functions that are passed as arguments to other functions. We won’t go into too much detail about how they are implemented, but we will take a look at how we pass functions as arguments.
+
+### Function creation
+
+JavaScript comes with a few ways of implementing functions, we will take a look at the two most common approaches.
+
+```jsx
+function myFunction(){
+	return "Hello, World"
+}  
+
+console.log(myFunction());
+```
+
+- We use the `function` keyword to indicate that a function is being created
+- We can use the `return` keyword to return  value from our function
+
+```jsx
+function myFunction(name, age){
+	return `${name} is ${age} years old`;
+}
+
+console.log(myFunction());
+```
+
+- We can use arguments in our functions.
+- We can’t force a user to pass a variable of a specific data type like Python
+
+```jsx
+const myFunction = () => {
+	return "Hello, World"
+} 
+
+console.log(myFunction());
+```
+
+- We can create ad-hoc functions with the arrow syntax
+- We can persist these functions by assigning them to a variable
+- After assigning the function to a variable, we can call it like an ordinary function.
+
+```jsx
+const myFunction = (name, age) => {
+	return `${name} is ${age} years old`;
+}
+
+console.log(myFunction())
+```
+
+- We can make use of arguments by passing them in the arrow function.
+
+### Callback Functions in Action
+
+We won’t go into the ins and outs of how callback functions are created, we will just take a look at how they are implemened.
+
+```jsx
+buttons.addEventListener('click', () => {
+	// Actions to be performed when the button is clicked
+})
+```
+
+- We are calling the `addEventListener` method from the `button` object (this would have been implemented earlier in the code)
+- The `addEventListener` method takes in a string argument for the action that will be performed and a callback function for the operation that needs to be performed when the action is triggered
+- We are using the arrow notation to create the function
+
+```jsx
+buttons.addEventListener('click', function () {
+	// Actions to be performed when the button is clicked
+})
+```
+
+- We are not just limited to using the arrow notation when working with callbacks, we are able to use the normal function declaration as well.
+
+# 11.2 Client Side Rendering
+
+Static websites are mostly a thing of the past, in the modern day, we expect the websites that we interact with to have some sort of additional functionality. 
+
+In order to have a web application, we need to have some sort of functionality that goes above a website and allows us to do things that we might expect from a native application like the type on your desktop or on your mobile phone.
+
+Client Side Rendering is a technique that allows web content to be rendered on the users browser, this provides the following advantages 
+
+- Faster navigation as there is very little communication between the browser and the server where the website is hosted
+- Reduces the strain on the server as there will be less requests and no need for the server to render pages for all of the users.
+
+It’s important to also note some of the drawbacks of client side rendering
+
+- Slowing initial load - We need to get all of the assets for the web page so that the code can run locally
+- Hard to secure credentials - Any files containing secrets will need to be sent to the client side, this includes environment variable file which might contain API keys and other information.
+- If the browser disables JavaScript, some of the content won’t be loaded
+
+### 11.2.1 Document Object Model
+
+In order to dynamically render content on the client side, we need to make sure of JavaScript as it is the only language that runs on web browsers.
+
+The Document Object Model (DOM) is a programming interface for web documents, that represents the structure of HTML documents as a hierarchical tree of objects. Each node in the tree corresponds with a part of the document such as elements, attributes or text content. The DOM provides a structured representation of the document allowing scripts to dynamically access, modify and manipulate the content.
+
+**Working with the DOM**
+
+To efficiently work with the DOM, our script needs to be connected to an HTML page, from there, we are able to reference the elements on the HTML page and perform our DOM manipulation.
+
+To get elements, we can use the following methods.
+
+```jsx
+const element = document.getElementById("myDiv");
+const containers = document.getElementsByClassName("container");
+const listItems = document.getElementsByTagName("li");
+const paragraph = document.querySelector(".container p");
+const paragraphs = document.querySelectorAll(".container p");
+```
+
+- We can get elements by their identifiers
+    - `getElementById` - Gets an element by it’s id
+    - `getElementsByClassName` - Gets a list of elements that belong to a specific calss
+    - `getElementsByTagName` - Get’s all of the element from the page from a specific class
+    - `querySelector` - Get’s a single or the first element in the tree that matches a query
+        - The query is written the same way that CSS style would be applied (.class for class #id for id)
+    - `querySelectorAll` - Get’s all of the elements that match the query being performed.
+
+We can create new elements and add some properties to them.
+
+```jsx
+const paragraph = document.createElement("p");
+const heading = document.createElement("h1");
+
+paragraph.textContent = "This is a new paragraph";
+heading.textContent = "I love pie";
+
+document.body.appendChild(paragraph);
+document.body.insertBefore(heading, paragraph);
+```
+
+- We can create elements using the `document.createElement`  method
+    - We can select from all of the available HTML tags
+- Each element will have some attribute and methods that we can work with
+    - `element.textContent` - this attribute will allow use to change the text that will be displayed within the element
+- For content to be rendered on the screen, we need to attach it to a component that exists on the screen.
+    - `document.body` - This is the parent of all of the component on our page, we can add components directly to this components using the `appendChild` method.
+    - `insertBefore` will make sure that one child comes before another, this can be important for styling or certain logic.
+
+We can modify our HTML elements using the DOM
+
+```jsx
+document.getElementById("myElement").innerHTML = "<strong> new content </strong>";
+document.getElementById("myElement").textContent = "Updated text content";
+document.getElementById("myElement").setAttribute("class", "new-class");
+```
+
+- We can add some HTML to the element using the `innerHTML` , this will overwrite the exiting HTML within the specified component.
+- We can use the `innerContent` to add some text content to the component, this will also overwrite the exiting content.
+- We can use the `setAttribute` method to add attribute to our element, we can assign the class, id and any other attribute that the element might be able to take. This will also overwrite past attributes of the same name.
+
+We can remove attributes from our page as well.
+
+```jsx
+const elementToRemove = document.getElementById("toRemove");
+elementToRemove.remove();
+```
+
+**Learning the DOM** 
+
+Like most things in programming, the best way to learn is through action. If you would like to become proficient in the DOM it’s best to get your hands dirty and start working on some application that require dynamic element.
+
+Having a good understanding of HTML is also very helpful and some CSS would also be of use.
+
+# 11.3 Resources
+
+- [Modern JavaScript From the Beginning](https://www.youtube.com/watch?v=BI1o2H9z9fo)
+- [Freecodecamp JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-introductory-javascript-by-building-a-pyramid-generator)
+- [w3 Schools](https://www.w3schools.com/js/)
