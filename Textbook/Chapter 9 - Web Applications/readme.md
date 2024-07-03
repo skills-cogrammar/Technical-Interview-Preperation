@@ -759,6 +759,7 @@ grid-template-columns: auto auto auto;
 gap: 20px
 }
 ```
+<svg>
 <div id="container" style="display: grid; grid-template-columns: auto auto auto; gap: 20px">
 	<div class="one" style="background-color: aqua; flex: 1">
 		ONE
@@ -788,6 +789,7 @@ gap: 20px
 		THREE
 	</div>
 </div>
+</svg>
 
 
 ### 3.1.2 Styling Hierarchy
