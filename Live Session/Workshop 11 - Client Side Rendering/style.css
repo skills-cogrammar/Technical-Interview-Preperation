@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.todoItem {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.task-complete {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.task-incomplete{
+    text-decoration: solid;
+}
+
