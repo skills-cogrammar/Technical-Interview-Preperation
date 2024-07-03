@@ -140,25 +140,7 @@ The concept of component based design is better described when working with libr
 </body>
 ```
 
-<body>
-	<div style="margin-left: 50px">
-		<div>
-			DIV GROUP 1
-		</div>		
-		<div>
-			DIV GROUP 1
-		</div>
-	</div>
-
-	<div style="background-color: brown">
-		<div>
-			DIV GROUP 2
-		</div>		
-		<div>
-			DIV GROUP 2
-		</div>
-	</div>	
-</body>
+![alt text](/assets/image-2.png)
 
 - Contained in our `body` we have two `div` elements 
 - Each `div` is a child of the `body` so any changes to `body` will affect both `div` elements 
@@ -475,16 +457,7 @@ Using the knowledge from the last section, we are going to create a simple webpa
 
 **OUTPUT**
 
-<header>
-<h2>Contact Us</h2>
-</header>
-<form action="" method="post">
-<input id="name" name="name" placeholder="Your Name" type="text" maxlength="30">
-<input id="surname" name="surname" placeholder="Your Last Name" type="text" maxlength="30">
-<input type="number" name="age" placeholder="age" min="0">
-<textarea name="message" id="message" placeholder="Your message"></textarea>
-<button type="submit"> Send </button>
-</form>
+![alt text](/assets/image-4.png)
 
 
 ## 2.2.1 Simple Contact Us Page More Structure 
@@ -544,53 +517,7 @@ Using the knowledge from the last section, we are going to create a simple webpa
 - The `div` is used to couple the label and the input, this will ensure that styling can be applied to each related component.
 - Using the `div` will result in the components being place one on top of the other.
 
-<body>
-    <header>
-      <h2>Contact Us</h2>
-    </header>
-
-    <form action="" method="post">
-    
-      <div>
-        <label for="name">Name</label>
-        <input
-          id="name"
-          name="name"
-          placeholder="Your Name"
-          type="text"
-          maxlength="30"
-        />
-      </div>
-
-      <div>
-        <label for="surname">Surname</label>
-        <input
-          id="surname"
-          name="surname"
-          placeholder="Your Last Name"
-          type="text"
-          maxlength="30"
-        />
-      </div>
-
-      <div>
-        <label for="age">Age</label>
-        <input type="number" name="age" placeholder="age" min="0" />
-      </div>
-
-      <div>
-        <label for="message">Message</label>
-        <textarea
-          name="message"
-          id="message"
-          placeholder="Your message"
-        ></textarea>
-      </div>
-
-      <button type="submit">Send</button>
-      
-    </form>
-</body>
+![alt text](/assets/image-5.png)
 
 
 ## 2.3 Simple Table
@@ -639,37 +566,7 @@ Using the knowledge from the last section, we are going to create a simple webpa
 
 **OUTPUT**
 
-<body>
-
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td> Jimmy </td>
-            <td>30</td>                        
-            <td>
-                <button>Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <td> Garry </td>
-            <td>40</td>       
-            <td>
-                <button>Delete</button>
-            </td>                 
-        </tr>
-        <tr>
-            <td> Sam </td>
-            <td>50</td>
-            <td>
-                <button>Delete</button>
-            </td>
-        </tr>
-    </table>
-</body>
-
+![alt text](/assets/image.png)
 
 # 3 Styling
 In modern day application development, just having plain HTML just isn't enough to captivate an audience. The visual appeal of an application is as important as the actual functionality. 
@@ -759,37 +656,7 @@ grid-template-columns: auto auto auto;
 gap: 20px
 }
 ```
-<svg>
-<div id="container" style="display: grid; grid-template-columns: auto auto auto; gap: 20px">
-	<div class="one" style="background-color: aqua; flex: 1">
-		ONE
-	</div >
-	<div class="two" style="background-color: blueviolet; flex: 1">   
-		TWO
-	</div>
-	<div class="three" style="background-color: blue; flex: 1">
-		THREE
-	</div>
-	<div class="one" style="background-color: aqua; flex: 1">
-		ONE
-	</div >
-	<div class="two" style="background-color: blueviolet; flex: 1">   
-		TWO
-	</div>
-	<div class="three" style="background-color: blue; flex: 1">
-		THREE
-	</div>
-	<div class="one" style="background-color: aqua; flex: 1">
-		ONE
-	</div >
-	<div class="two" style="background-color: blueviolet; flex: 1">   
-		TWO
-	</div>
-	<div class="three" style="background-color: blue; flex: 1">
-		THREE
-	</div>
-</div>
-</svg>
+![alt text](/assets/image.png)
 
 
 ### 3.1.2 Styling Hierarchy
@@ -814,16 +681,7 @@ When we have a container of any type, we refer to the margin as the space around
 
 When margin is applied, there is can be no elements within the space, for example, if there are two elements in a parent and margin is applied on one of them, one of two things might happen, the element where the margin is being applied will either shrink, or push the other component.
 
-<body style="margin: 0; padding: 0;">
-    <div style="background-color: brown; display: flex; justify-content: space-evenly;">
-        <div style="background-color: aqua; width: 100%; margin: 10px; color: black ">
-            MARGIN APPLIED
-        </div>
-        <div style="background-color: blue; width: 100%;  color: black">
-            NO MARGIN
-        </div>
-    </div>
-</body>
+![alt text](/assets/image1.png)
 - The parent containers background has been set the colour brown
 	- The `MARGIN APPLIED` and `NO MARGIN` container are both child elements 
 	- Both child component have the same amount of space allocated
@@ -835,27 +693,7 @@ When margin is applied, there is can be no elements within the space, for exampl
 ### 3.2.2 Padding 
 Where margin is an external force, padding is an internal force, this is the force that the parent component applies on its children. When padding is applied, it will exert a force on all of the child components within that element. This is really helpful when you need to enforce certain boundaries within a parent component.
 
-<body style="margin: 0; padding: 0;">
-    <div style="background-color: brown; display: flex; justify-content: space-evenly; padding: 5px ">
-        <div style="background-color: aqua; width: 100%; margin: 10px; color: black ">
-            MARGIN APPLIED
-        </div>
-        <div style="background-color: blue; width: 100%;  color: black">
-            NO MARGIN
-        </div>
-    </div>
-</body>
-
-<body style="margin: 0; padding: 0;">
-    <div style="background-color: brown; display: flex; justify-content: space-evenly; padding: 5px ">
-        <div style="background-color: aqua; width: 100%; color: black ">
-            MARGIN APPLIED
-        </div>
-        <div style="background-color: blue; width: 100%;  color: black">
-            NO MARGIN
-        </div>
-    </div>
-</body>
+![alt text](/assets/image-1.png)
 - Adding padding to the parent will squash both elements the same amount
 - Removing the initial margin from the left child, it's clear that the padding only works around the child components.
 
