@@ -1,6 +1,6 @@
 # Chapter 13 - Session Management
 
-Nearly every application now requires you to create an account to access the service, this feature allows for the application experience to be more personalized and/or prevent unauthorized access to sensitive information. 
+Nearly every application now requires you to create an account to access the service, this feature allows for the application experience to be more personalized and/or prevent unauthorised access to sensitive information. 
 
 The distributed nature of modern software presents a few challenges when it comes to ensuring that the interaction between a client and a server is handled correctly. When applications mostly ran natively, the application would only communicate with the server at the initial login and the rest of the operations would be carried out natively, but now, we need constant communication with the server and with each request, the server needs to be aware of who it’s communicating with.
 
@@ -98,7 +98,7 @@ Keeping in mind that our server is responsible for all private operations, one w
 Session tokens are a good tool for keeping track of a user. Session tokens are generated on the server once the user has been authenticated, the process would look something like this:
 
 1. The user sends their credentials (email+password, access token, etc)
-2. The server verifies that the details are correct (looking into the database, using a third party tool)
+2. The server verifies that the details are correct (looking into the database, using a third-party tool)
 3. A token containing identifying information about the user is generated 
 4. The token is returned to the client
 5. The client stores the token and sends the token with each request 
@@ -128,15 +128,15 @@ The token-based approach requires the client to store the token in a manner that
         - Able to store a lot of data
         - More control over when data is sent since it’s not sent automatically with each request
     - Cons
-        - Requries JavaScript to access making it vulnerable to XSS
-        - Data is persisted until manually cleaned, when you leave a site and come back, the localstorage will still be there.
+        - Requires JavaScript to access making it vulnerable to XSS
+        - Data is persisted until manually cleaned, when you leave a site and come back, the local storage will still be there.
 - Session Storage
-    - A temporary version of localstorage, it only persists the data for a single tab of a given website and clears when that browser tab is closed
+    - A temporary version of local storage, it only persists the data for a single tab of a given website and clears when that browser tab is closed
     - Pros
         - Same control of local storage
         - The data is cleared once the session ends
     - Cons
-        - All the same as localstorage.
+        - All the same as local storage.
 
 ### 13.3.2 Securing a Session Token
 
